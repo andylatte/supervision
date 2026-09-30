@@ -30,8 +30,14 @@ h1,h2,h3{font-family:'Newsreader',Georgia,serif;font-weight:500;margin:0}
 .eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:600}
 .idx{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);font-weight:600;display:flex;align-items:center;gap:10px}
 .idx .rule{flex:0 0 34px;height:1px;background:#C1C8C5}
-.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:14px;font-weight:600;padding:13px 26px;text-decoration:none;border:1px solid var(--accent)}
-.btn-outline{display:inline-block;background:transparent;color:var(--fg);font-size:14px;font-weight:600;padding:12px 26px;border:1px solid var(--fg);text-decoration:none}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:14px;font-weight:600;padding:13px 26px;text-decoration:none;border:1px solid var(--accent);transition:background-color .15s ease}
+.btn:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+.btn-outline{display:inline-block;background:transparent;color:var(--fg);font-size:14px;font-weight:600;padding:12px 26px;border:1px solid var(--fg);text-decoration:none;transition:background-color .15s ease,border-color .15s ease}
+.btn-outline:hover{background:var(--surface);border-color:var(--accent);color:var(--accent)}
+.link-arrow{display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-weight:600;font-size:14px;transition:color .15s ease}
+.link-arrow .arrow{transition:transform .15s ease;display:inline-block}
+.link-arrow:hover{color:var(--fg)}
+.link-arrow:hover .arrow{transform:translateX(3px)}
 .section{padding-block:64px}
 .section.surface{background:var(--surface)}
 .section.deep{background:var(--accent-deep);color:var(--bg)}
@@ -40,27 +46,33 @@ h1,h2,h3{font-family:'Newsreader',Georgia,serif;font-weight:500;margin:0}
 .divider-row > div:last-child{border-right:none}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.card{background:#fff;padding:20px;min-width:0}
-.card-flat{padding:26px;border:1px solid var(--line);min-width:0;display:flex;flex-direction:column;justify-content:space-between}
+.card{background:#fff;padding:20px;min-width:0;display:flex;flex-direction:column;justify-content:space-between;transition:box-shadow .15s ease;box-shadow:0 1px 2px rgba(28,28,26,.04)}
+.card:hover{box-shadow:0 4px 14px rgba(28,28,26,.08)}
+.card-flat{padding:26px;border:1px solid var(--line);min-width:0;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 1px 2px rgba(28,28,26,.04);transition:box-shadow .15s ease}
+.card-flat:hover{box-shadow:0 4px 14px rgba(28,28,26,.08)}
 header.site{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
 header.site .wrap{height:64px;display:flex;align-items:center;justify-content:space-between}
 .wordmark{font-family:'Newsreader',Georgia,serif;font-size:17px}
 .wordmark em{font-style:italic;color:var(--muted);font-size:14px}
 nav.mainnav{display:flex;align-items:center;gap:22px}
-nav.mainnav a{font-size:12px;color:var(--fg);text-decoration:none}
+nav.mainnav a{font-size:12px;color:var(--muted);text-decoration:none;transition:color .15s ease}
+nav.mainnav a:hover{color:var(--fg)}
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:stretch}
 .hero-photo{width:100%;height:100%;min-height:340px;object-fit:cover}
 .stat-num{font-family:'Newsreader',Georgia,serif;font-size:20px;margin-bottom:4px}
 .stat-label{font-size:12px;color:var(--muted)}
-.triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-top:none}
+.triptych-wrap{background:#fff;border:1px solid var(--line);margin-top:32px}
+.triptych{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 .triptych>div{padding:26px 24px;border-right:1px solid var(--line)}
 .triptych>div:last-child{border-right:none}
 .tri-h{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:18px;margin-bottom:8px}
 .bento{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:16px;align-items:stretch}
 .bento .stack{display:flex;flex-direction:column;gap:16px}
+.bento .stack .card{flex:1}
 .methods-photo{width:100%;flex:1;min-height:220px;object-fit:cover}
-.num-tag{font-family:'Newsreader',Georgia,serif;font-style:italic;color:var(--muted);font-size:16px;margin-bottom:8px}
-.tool-line{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);margin-top:10px}
+.num-tag{font-family:'Newsreader',Georgia,serif;font-style:italic;color:var(--muted);font-size:18px;margin-bottom:8px;display:block}
+.card-body{display:flex;flex-direction:column;gap:6px}
+.tool-line{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--accent);font-weight:600;margin-top:16px;padding-top:14px;border-top:1px solid var(--surface)}
 .pricing-row{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
 .pricing-row:last-child{border-bottom:none}
 .price{font-family:'Newsreader',Georgia,serif;font-size:20px;white-space:nowrap}
@@ -68,11 +80,13 @@ nav.mainnav a{font-size:12px;color:var(--fg);text-decoration:none}
 .side-note{background:#fff;padding:18px}
 form .field{display:flex;flex-direction:column;gap:4px}
 form label{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
-form input,form select,form textarea{background:#fff;border:1px solid var(--line);padding:11px 12px;font-size:13px;font-family:inherit;color:var(--fg)}
+form input,form select,form textarea{background:#fff;border:1px solid var(--line);padding:11px 12px;font-size:13px;font-family:inherit;color:var(--fg);transition:border-color .15s ease}
 form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--accent)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .quote-bar{border:1px solid var(--line);padding:26px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .quote-bar q{font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:17px;max-width:600px}
+.haltung-photo-frame{background:#0d201d;padding:10px}
+.haltung-photo{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
 footer.site{border-top:1px solid var(--line);padding-block:32px}
 footer.site .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
 .legal{display:flex;gap:22px;font-size:12px;color:var(--muted)}
@@ -124,10 +138,12 @@ footer.site .wrap{display:flex;justify-content:space-between;align-items:center;
       <div><div class="stat-num">DGSv i.A.</div><div class="stat-label">Supervision · Fallbesprechung · Team</div></div>
       <div><div class="stat-num">Praxis + online</div><div class="stat-label">Atelier in Potsdam</div></div>
     </div>
-    <div class="triptych">
-      <div><div class="tri-h">Sie bringen das Anliegen.</div><div style="font-size:13px;color:var(--muted)">Ein Fall, eine Rolle, eine Entscheidung — konkret und aktuell.</div></div>
-      <div><div class="tri-h">Wir stellen es in den Raum.</div><div style="font-size:13px;color:var(--muted)">Mit Ton, Tuch, Figur und Körper wird sichtbar, was Worte allein nicht fassen.</div></div>
-      <div><div class="tri-h">Sie nehmen Handlung mit.</div><div style="font-size:13px;color:var(--muted)">Jede Sitzung endet mit einer überprüfbaren nächsten Handlung.</div></div>
+    <div class="triptych-wrap">
+      <div class="triptych">
+        <div><div class="tri-h">Sie bringen das Anliegen.</div><div style="font-size:13px;color:var(--muted)">Ein Fall, eine Rolle, eine Entscheidung — konkret und aktuell.</div></div>
+        <div><div class="tri-h">Wir stellen es in den Raum.</div><div style="font-size:13px;color:var(--muted)">Mit Ton, Tuch, Figur und Körper wird sichtbar, was Worte allein nicht fassen.</div></div>
+        <div><div class="tri-h">Sie nehmen Handlung mit.</div><div style="font-size:13px;color:var(--muted)">Jede Sitzung endet mit einer überprüfbaren nächsten Handlung.</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -142,16 +158,16 @@ footer.site .wrap{display:flex;justify-content:space-between;align-items:center;
     </div>
     <div class="bento">
       <div class="stack">
-        <div class="card"><div class="num-tag">01</div><div style="font-weight:600;margin-bottom:6px">Raum &amp; Skulptur (Theatrale Aufstellung)</div><div style="font-size:13px;color:var(--muted)">Miniaturen, Hocker und Distanzen machen unausgesprochene Teamdynamiken und Rollenkonflikte sichtbar. Nicht das Argument entscheidet, sondern das reale Bild im Raum.</div><div class="tool-line">Werkzeuge: Holzminiaturen, Podeste, Raumachsen</div></div>
-        <div class="card"><div class="num-tag">02</div><div style="font-weight:600;margin-bottom:6px">Ton &amp; Plastisches Arbeiten</div><div style="font-size:13px;color:var(--muted)">Druck, Grenzen und Festgefahrenes buchstäblich begreifbar machen, um neue Formbarkeit zu erproben. Der haptische Widerstand des Tons löst rationale Blockaden.</div><div class="tool-line">Werkzeuge: Roh-Ton, Modellierhölzer, Gipsformen</div></div>
+        <div class="card"><div class="card-body"><span class="num-tag">01</span><div style="font-weight:600">Raum &amp; Skulptur (Theatrale Aufstellung)</div><div style="font-size:13px;color:var(--muted)">Miniaturen, Hocker und Distanzen machen unausgesprochene Teamdynamiken und Rollenkonflikte sichtbar. Nicht das Argument entscheidet, sondern das reale Bild im Raum.</div></div><div class="tool-line">Werkzeuge: Holzminiaturen, Podeste, Raumachsen</div></div>
+        <div class="card"><div class="card-body"><span class="num-tag">02</span><div style="font-weight:600">Ton &amp; Plastisches Arbeiten</div><div style="font-size:13px;color:var(--muted)">Druck, Grenzen und Festgefahrenes buchstäblich begreifbar machen, um neue Formbarkeit zu erproben. Der haptische Widerstand des Tons löst rationale Blockaden.</div></div><div class="tool-line">Werkzeuge: Roh-Ton, Modellierhölzer, Gipsformen</div></div>
       </div>
       <div class="card" style="padding:0;display:flex;flex-direction:column">
         <img class="methods-photo" src="images/methoden-material.png" alt="Handgeschnitzte Figuren, Flusssteine und Naturseiden auf einem Werktisch">
         <div style="padding:14px;font-size:12px;font-style:italic;color:var(--muted)">Materialien im Atelier: Handgeschnitzte Figuren, Flusssteine und Naturseiden zur räumlichen Anordnung.</div>
       </div>
       <div class="stack">
-        <div class="card"><div class="num-tag">03</div><div style="font-weight:600;margin-bottom:6px">Seidentücher &amp; Farbfelder</div><div style="font-size:13px;color:var(--muted)">Atmosphären, Stimmungen und unausgesprochene Spannungsfelder im Raum abgrenzen und ordnen. Weiche Grenzen schaffen Klarheit über territoriale Zuständigkeiten.</div><div class="tool-line">Werkzeuge: Handgefärbte Seidenstoffe, Schnüre, Filz</div></div>
-        <div class="card"><div class="num-tag">04</div><div style="font-weight:600;margin-bottom:6px">Verkörperung &amp; Rollenwechsel</div><div style="font-size:13px;color:var(--muted)">Kurze szenische Perspektivenwechsel: Die Welt mit den Augen von Klient:innen, Kolleg:innen oder Führungskräften wahrnehmen, um empathische Resonanz zu gewinnen.</div><div class="tool-line">Werkzeuge: Leere Stühle, neutrale Masken, Körperhaltung</div></div>
+        <div class="card"><div class="card-body"><span class="num-tag">03</span><div style="font-weight:600">Seidentücher &amp; Farbfelder</div><div style="font-size:13px;color:var(--muted)">Atmosphären, Stimmungen und unausgesprochene Spannungsfelder im Raum abgrenzen und ordnen. Weiche Grenzen schaffen Klarheit über territoriale Zuständigkeiten.</div></div><div class="tool-line">Werkzeuge: Handgefärbte Seidenstoffe, Schnüre, Filz</div></div>
+        <div class="card"><div class="card-body"><span class="num-tag">04</span><div style="font-weight:600">Verkörperung &amp; Rollenwechsel</div><div style="font-size:13px;color:var(--muted)">Kurze szenische Perspektivenwechsel: Die Welt mit den Augen von Klient:innen, Kolleg:innen oder Führungskräften wahrnehmen, um empathische Resonanz zu gewinnen.</div></div><div class="tool-line">Werkzeuge: Leere Stühle, neutrale Masken, Körperhaltung</div></div>
       </div>
     </div>
   </div>
@@ -229,8 +245,10 @@ footer.site .wrap{display:flex;justify-content:space-between;align-items:center;
       <div class="idx" style="color:#97B9B2"><span style="color:#97B9B2">04</span><span class="rule" style="background:rgba(255,255,255,.3)"></span><span>Haltung</span></div>
       <h2 style="font-size:30px;margin-top:10px">Klar im Rahmen, offen im Prozess.</h2>
     </div>
-    <div class="grid2" style="grid-template-columns:0.8fr 1.6fr;align-items:stretch">
-      <img src="images/haltung-sessel.png" alt="Ein Sessel im Studiolicht" style="width:100%;height:100%;min-height:260px;object-fit:cover">
+    <div class="grid2" style="grid-template-columns:0.8fr 1.6fr;align-items:start">
+      <div class="haltung-photo-frame">
+        <img class="haltung-photo" src="images/haltung-sessel.png" alt="Ein Sessel im Studiolicht">
+      </div>
       <div class="grid2">
         <div style="padding:6px 0"><h3 style="font-size:19px;margin-bottom:10px">Expert:in bleiben Sie</h3><p style="font-size:13px;color:#D6E2DF;margin:0">Ich deute nicht, ich diagnostiziere nicht. Ich stelle Fragen, gebe Material und halte den Prozess, damit Sie zu Ihrer eigenen fundierten Einschätzung kommen.</p></div>
         <div style="padding:6px 0"><h3 style="font-size:19px;margin-bottom:10px">Erfahrung vor Erklärung</h3><p style="font-size:13px;color:#D6E2DF;margin:0">Erst handeln, dann ordnen. Der Körper und das Bild wissen oft früher als der Kopf, wo es klemmt — wir nutzen das systematisch.</p></div>
@@ -271,7 +289,7 @@ footer.site .wrap{display:flex;justify-content:space-between;align-items:center;
         </div>
         <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px">
           <span style="font-size:12px;color:var(--muted)">Sprachen: Deutsch / Englisch</span>
-          <a href="#kontakt" style="font-size:13px;color:var(--accent);font-weight:600;text-decoration:none">Kontakt aufnehmen →</a>
+          <a href="#kontakt" class="link-arrow"><span>Kontakt aufnehmen</span><span class="arrow">→</span></a>
         </div>
       </div>
     </div>
