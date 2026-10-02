@@ -5,202 +5,216 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Modulo — Atelier für erfahrungsbasierte Supervision</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Work+Sans:wght@400;500;600&display=swap">
 <!-- Gebaut aus src/styles.css mit Tailwind CSS (npm run build) -->
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<header class="sticky top-0 z-10 border-b bg-background">
-  <div class="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-6">
-    <div class="font-serif text-[17px]">MODULO <em class="text-sm text-muted-foreground">— Atelier für erfahrungsbasierte Supervision</em></div>
-    <nav class="hidden items-center gap-5.5 md:flex">
-      <a class="text-xs text-muted-foreground no-underline transition-colors hover:text-foreground" href="#methoden">Methoden</a>
-      <a class="text-xs text-muted-foreground no-underline transition-colors hover:text-foreground" href="#fuer-wen">Für wen</a>
-      <a class="text-xs text-muted-foreground no-underline transition-colors hover:text-foreground" href="#haltung">Haltung</a>
-      <a class="text-xs text-muted-foreground no-underline transition-colors hover:text-foreground" href="#ueber-mich">Über mich</a>
-      <a class="text-xs text-muted-foreground no-underline transition-colors hover:text-foreground" href="#preise">Preise</a>
-      <a class="btn px-4.5 py-2.5 text-xs" href="#kontakt">Erstgespräch anfragen</a>
-    </nav>
+<header class="sticky top-0 z-50 border-b bg-background/95 backdrop-blur-sm">
+  <div class="mx-auto flex h-20 w-full max-w-[1500px] items-center justify-between px-5 md:px-8 lg:px-16">
+    <a href="#welcome" class="font-serif text-[20px] tracking-tight text-foreground no-underline md:text-[24px]">MODULO <em class="hidden text-muted-foreground sm:inline">— Atelier für erfahrungsbasierte Supervision</em></a>
+    <div class="flex items-center gap-6 lg:gap-8">
+      <nav class="hidden items-center gap-6 lg:flex xl:gap-8">
+        <a class="nav-link" href="#methoden">Methoden</a>
+        <a class="nav-link" href="#fuer-wen">Für wen</a>
+        <a class="nav-link" href="#haltung">Haltung</a>
+        <a class="nav-link" href="#ueber-mich">Über mich</a>
+        <a class="nav-link" href="#preise">Preise</a>
+      </nav>
+      <a class="btn hidden px-6 py-3 sm:inline-block" href="#kontakt">Erstgespräch anfragen</a>
+      <details class="group relative lg:hidden">
+        <summary class="flex cursor-pointer list-none items-center px-2 py-1 text-sm tracking-wide text-foreground [&::-webkit-details-marker]:hidden">Menü</summary>
+        <nav onclick="this.closest('details').open=false" class="absolute right-0 mt-4 flex w-64 flex-col border bg-background p-3 shadow-md">
+          <a class="nav-link px-2 py-2" href="#methoden">Methoden</a>
+          <a class="nav-link px-2 py-2" href="#fuer-wen">Für wen</a>
+          <a class="nav-link px-2 py-2" href="#haltung">Haltung</a>
+          <a class="nav-link px-2 py-2" href="#ueber-mich">Über mich</a>
+          <a class="nav-link px-2 py-2" href="#preise">Preise</a>
+          <a class="btn mt-2 text-center" href="#kontakt">Erstgespräch anfragen</a>
+        </nav>
+      </details>
+    </div>
   </div>
 </header>
 
 <main>
 
 <!-- 01 WELCOME -->
-<section class="py-16" id="welcome">
-  <div class="mx-auto max-w-[1180px] px-6">
-    <div class="section-index mb-5.5"><span>01</span><span class="rule"></span><span>Welcome · Supervision mit künstlerischen, körperlichen Methoden</span></div>
-    <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
-      <div class="flex flex-col justify-center gap-5.5">
-        <h1 class="max-w-160 text-[40px] leading-[1.25] text-balance">Der direkte Weg zeigt, was Sie schon wissen. <em>Hier zeigt sich, was Sie noch nicht gesehen haben.</em></h1>
-        <p class="my-4 max-w-130 text-base text-muted-foreground">Ich biete erfahrungsbasierte Supervision für Fachkräfte, Teams und Leitungen. Sie sind Expert:in für Ihr Anliegen — ich biete Raum, Material und Methode, damit aus Erfahrung Erkenntnis wird. Professionell, lösungsorientiert, ohne Esoterik.</p>
-        <div class="flex flex-wrap gap-3.5">
+<section class="section pt-10 md:pt-16" id="welcome">
+  <div class="page">
+    <div class="section-index mb-8"><span>01</span><span class="rule"></span><span>Welcome · Supervision mit künstlerischen, körperlichen Methoden</span></div>
+    <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+      <div class="flex flex-col justify-center gap-6">
+        <h1 class="max-w-[680px] text-[38px] leading-[44px] tracking-tight text-balance md:text-[48px] md:leading-[56px]">Der direkte Weg zeigt, was Sie schon wissen. <em>Hier zeigt sich, was Sie noch nicht gesehen haben.</em></h1>
+        <p class="lead max-w-xl">Ich biete erfahrungsbasierte Supervision für Fachkräfte, Teams und Leitungen. Sie sind Expert:in für Ihr Anliegen — ich biete Raum, Material und Methode, damit aus Erfahrung Erkenntnis wird. Professionell, lösungsorientiert, ohne Esoterik.</p>
+        <div class="flex flex-wrap gap-4 pt-2">
           <a class="btn" href="#kontakt">Erstgespräch vereinbaren</a>
           <a class="btn-outline" href="#methoden">Methoden kennenlernen</a>
         </div>
       </div>
-      <img class="block h-full min-h-85 w-full object-cover" src="images/hero-werkstatt.png" alt="Kinder arbeiten mit Ton in einer hellen Werkstatt">
+      <img class="block h-full min-h-85 w-full bg-muted-strong object-cover" src="images/hero-werkstatt.png" alt="Kinder arbeiten mit Ton in einer hellen Werkstatt">
     </div>
-  </div>
-  <div class="mx-auto max-w-[1180px] px-6">
-    <div class="mt-10 flex flex-col border-y md:flex-row md:flex-wrap">
-      <div class="flex-[1_1_200px] border-b px-6 py-5.5 md:border-r md:border-b-0"><div class="mb-1 font-serif text-xl">18 Jahre</div><div class="text-xs text-muted-foreground">Praxis · Theatertherapie, Supervision</div></div>
-      <div class="flex-[1_1_200px] border-b px-6 py-5.5 md:border-r md:border-b-0"><div class="mb-1 font-serif text-xl">DGSv i.A.</div><div class="text-xs text-muted-foreground">Supervision · Fallbesprechung · Team</div></div>
-      <div class="flex-[1_1_200px] px-6 py-5.5"><div class="mb-1 font-serif text-xl">Praxis + online</div><div class="text-xs text-muted-foreground">Atelier in Potsdam</div></div>
+    <div class="mt-12 flex flex-col border-y md:mt-16 md:flex-row">
+      <div class="flex-1 border-b px-6 py-6 md:border-r md:border-b-0"><div class="mb-1 font-serif text-[22px]">18 Jahre</div><div class="text-[13px] text-muted-foreground">Praxis · Theatertherapie, Supervision</div></div>
+      <div class="flex-1 border-b px-6 py-6 md:border-r md:border-b-0"><div class="mb-1 font-serif text-[22px]">DGSv i.A.</div><div class="text-[13px] text-muted-foreground">Supervision · Fallbesprechung · Team</div></div>
+      <div class="flex-1 px-6 py-6"><div class="mb-1 font-serif text-[22px]">Praxis + online</div><div class="text-[13px] text-muted-foreground">Atelier in Potsdam</div></div>
     </div>
-    <div class="mt-8 border bg-card">
-      <div class="grid md:grid-cols-3">
-        <div class="border-b px-6 py-6.5 md:border-r md:border-b-0"><div class="mb-2 font-serif text-lg italic">Sie bringen das Anliegen.</div><div class="text-[13px] text-muted-foreground">Ein Fall, eine Rolle, eine Entscheidung — konkret und aktuell.</div></div>
-        <div class="border-b px-6 py-6.5 md:border-r md:border-b-0"><div class="mb-2 font-serif text-lg italic">Wir stellen es in den Raum.</div><div class="text-[13px] text-muted-foreground">Mit Ton, Tuch, Figur und Körper wird sichtbar, was Worte allein nicht fassen.</div></div>
-        <div class="px-6 py-6.5"><div class="mb-2 font-serif text-lg italic">Sie nehmen Handlung mit.</div><div class="text-[13px] text-muted-foreground">Jede Sitzung endet mit einer überprüfbaren nächsten Handlung.</div></div>
-      </div>
+    <div class="mt-8 grid border bg-muted md:grid-cols-3">
+      <div class="border-b p-6 md:border-r md:border-b-0 md:p-8"><div class="mb-2 font-serif text-xl italic">Sie bringen das Anliegen.</div><p class="card-text">Ein Fall, eine Rolle, eine Entscheidung — konkret und aktuell.</p></div>
+      <div class="border-b p-6 md:border-r md:border-b-0 md:p-8"><div class="mb-2 font-serif text-xl italic">Wir stellen es in den Raum.</div><p class="card-text">Mit Ton, Tuch, Figur und Körper wird sichtbar, was Worte allein nicht fassen.</p></div>
+      <div class="p-6 md:p-8"><div class="mb-2 font-serif text-xl italic">Sie nehmen Handlung mit.</div><p class="card-text">Jede Sitzung endet mit einer überprüfbaren nächsten Handlung.</p></div>
     </div>
   </div>
 </section>
 
 <!-- 02 METHODEN & MATERIAL -->
-<section class="bg-muted py-16" id="methoden">
-  <div class="mx-auto flex max-w-[1180px] flex-col gap-7 px-6">
-    <div class="flex flex-col gap-2.5">
+<section class="section bg-muted" id="methoden">
+  <div class="page">
+    <div class="section-head">
       <div class="section-index"><span>02</span><span class="rule"></span><span>Methoden &amp; Materialien</span></div>
-      <h2 class="text-3xl">Vom Reden ins Greifen: Wie wir arbeiten.</h2>
-      <p class="my-3.75 max-w-155 text-muted-foreground">Supervision bleibt oft im rein Kognitiven verhaftet. Wenn wir Situationen jedoch mit Material im Raum verorten, werden verdeckte Beziehungsgefüge, Machtachsen und Ressourcen sofort physisch spürbar und verhandelbar.</p>
+      <h2 class="heading">Vom Reden ins Greifen: Wie wir arbeiten.</h2>
+      <p class="lead">Supervision bleibt oft im rein Kognitiven verhaftet. Wenn wir Situationen jedoch mit Material im Raum verorten, werden verdeckte Beziehungsgefüge, Machtachsen und Ressourcen sofort physisch spürbar und verhandelbar.</p>
     </div>
-    <div class="grid gap-4 md:grid-cols-[1fr_1.2fr_1fr]">
-      <div class="flex flex-col gap-4">
-        <div class="card flex-1"><div class="flex flex-col gap-1.5"><span class="mb-2 block font-serif text-lg text-muted-foreground italic">01</span><div class="font-semibold">Raum &amp; Skulptur (Theatrale Aufstellung)</div><div class="text-[13px] text-muted-foreground">Miniaturen, Hocker und Distanzen machen unausgesprochene Teamdynamiken und Rollenkonflikte sichtbar. Nicht das Argument entscheidet, sondern das reale Bild im Raum.</div></div><div class="mt-4 border-t border-muted pt-3.5 text-[11px] font-semibold tracking-[0.5px] text-primary uppercase">Werkzeuge: Holzminiaturen, Podeste, Raumachsen</div></div>
-        <div class="card flex-1"><div class="flex flex-col gap-1.5"><span class="mb-2 block font-serif text-lg text-muted-foreground italic">02</span><div class="font-semibold">Ton &amp; Plastisches Arbeiten</div><div class="text-[13px] text-muted-foreground">Druck, Grenzen und Festgefahrenes buchstäblich begreifbar machen, um neue Formbarkeit zu erproben. Der haptische Widerstand des Tons löst rationale Blockaden.</div></div><div class="mt-4 border-t border-muted pt-3.5 text-[11px] font-semibold tracking-[0.5px] text-primary uppercase">Werkzeuge: Roh-Ton, Modellierhölzer, Gipsformen</div></div>
+    <div class="grid gap-6 lg:grid-cols-3 lg:gap-8">
+      <div class="flex flex-col gap-6 lg:gap-8">
+        <div class="card flex-1"><div><span class="num-tag">01</span><h3 class="card-title mb-2">Raum &amp; Skulptur (Theatrale Aufstellung)</h3><p class="card-text">Miniaturen, Hocker und Distanzen machen unausgesprochene Teamdynamiken und Rollenkonflikte sichtbar. Nicht das Argument entscheidet, sondern das reale Bild im Raum.</p></div><div class="meta-line">Werkzeuge: Holzminiaturen, Podeste, Raumachsen</div></div>
+        <div class="card flex-1"><div><span class="num-tag">02</span><h3 class="card-title mb-2">Ton &amp; Plastisches Arbeiten</h3><p class="card-text">Druck, Grenzen und Festgefahrenes buchstäblich begreifbar machen, um neue Formbarkeit zu erproben. Der haptische Widerstand des Tons löst rationale Blockaden.</p></div><div class="meta-line">Werkzeuge: Roh-Ton, Modellierhölzer, Gipsformen</div></div>
       </div>
-      <div class="card p-0">
-        <img class="block min-h-55 w-full flex-1 object-cover" src="images/methoden-material.png" alt="Handgeschnitzte Figuren, Flusssteine und Naturseiden auf einem Werktisch">
-        <div class="p-3.5 text-xs text-muted-foreground italic">Materialien im Atelier: Handgeschnitzte Figuren, Flusssteine und Naturseiden zur räumlichen Anordnung.</div>
-      </div>
-      <div class="flex flex-col gap-4">
-        <div class="card flex-1"><div class="flex flex-col gap-1.5"><span class="mb-2 block font-serif text-lg text-muted-foreground italic">03</span><div class="font-semibold">Seidentücher &amp; Farbfelder</div><div class="text-[13px] text-muted-foreground">Atmosphären, Stimmungen und unausgesprochene Spannungsfelder im Raum abgrenzen und ordnen. Weiche Grenzen schaffen Klarheit über territoriale Zuständigkeiten.</div></div><div class="mt-4 border-t border-muted pt-3.5 text-[11px] font-semibold tracking-[0.5px] text-primary uppercase">Werkzeuge: Handgefärbte Seidenstoffe, Schnüre, Filz</div></div>
-        <div class="card flex-1"><div class="flex flex-col gap-1.5"><span class="mb-2 block font-serif text-lg text-muted-foreground italic">04</span><div class="font-semibold">Verkörperung &amp; Rollenwechsel</div><div class="text-[13px] text-muted-foreground">Kurze szenische Perspektivenwechsel: Die Welt mit den Augen von Klient:innen, Kolleg:innen oder Führungskräften wahrnehmen, um empathische Resonanz zu gewinnen.</div></div><div class="mt-4 border-t border-muted pt-3.5 text-[11px] font-semibold tracking-[0.5px] text-primary uppercase">Werkzeuge: Leere Stühle, neutrale Masken, Körperhaltung</div></div>
+      <figure class="m-0 flex flex-col overflow-hidden border border-border/60 bg-card shadow-sm">
+        <img class="block min-h-95 w-full flex-1 object-cover" src="images/methoden-material.png" alt="Handgeschnitzte Figuren, Flusssteine und Naturseiden auf einem Werktisch">
+        <figcaption class="bg-muted-stronger p-4 font-serif text-sm text-foreground italic md:p-5">Materialien im Atelier: Handgeschnitzte Figuren, Flusssteine und Naturseiden zur räumlichen Anordnung.</figcaption>
+      </figure>
+      <div class="flex flex-col gap-6 lg:gap-8">
+        <div class="card flex-1"><div><span class="num-tag">03</span><h3 class="card-title mb-2">Seidentücher &amp; Farbfelder</h3><p class="card-text">Atmosphären, Stimmungen und unausgesprochene Spannungsfelder im Raum abgrenzen und ordnen. Weiche Grenzen schaffen Klarheit über territoriale Zuständigkeiten.</p></div><div class="meta-line">Werkzeuge: Handgefärbte Seidenstoffe, Schnüre, Filz</div></div>
+        <div class="card flex-1"><div><span class="num-tag">04</span><h3 class="card-title mb-2">Verkörperung &amp; Rollenwechsel</h3><p class="card-text">Kurze szenische Perspektivenwechsel: Die Welt mit den Augen von Klient:innen, Kolleg:innen oder Führungskräften wahrnehmen, um empathische Resonanz zu gewinnen.</p></div><div class="meta-line">Werkzeuge: Leere Stühle, neutrale Masken, Körperhaltung</div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 03 FÜR WEN -->
-<section class="py-16" id="fuer-wen">
-  <div class="mx-auto flex max-w-[1180px] flex-col gap-7 px-6">
-    <div class="flex flex-col gap-2.5">
+<section class="section" id="fuer-wen">
+  <div class="page">
+    <div class="section-head">
       <div class="section-index"><span>03</span><span class="rule"></span><span>Für wen</span></div>
-      <h2 class="text-3xl">Formate für unterschiedliche Konstellationen.</h2>
-      <p class="my-3.75 max-w-140 text-muted-foreground">Passgenaue Rahmungen für fokussierte Tiefenarbeit – vom vertraulichen Zweier-Setting bis zur komplexen Teamklausur.</p>
+      <h2 class="heading">Formate für unterschiedliche Konstellationen.</h2>
+      <p class="lead">Passgenaue Rahmungen für fokussierte Tiefenarbeit – vom vertraulichen Zweier-Setting bis zur komplexen Teamklausur.</p>
     </div>
-    <div class="grid gap-4 md:grid-cols-3">
-      <div class="flex min-w-0 flex-col justify-between border p-6.5 shadow-card transition-shadow duration-150 hover:shadow-card-hover">
+    <div class="grid gap-6 md:grid-cols-3 lg:gap-8">
+      <div class="card bg-muted">
         <div>
-          <div class="mb-3.5 flex items-center justify-between">
-            <span class="text-xs text-muted-foreground">A · Einzel</span>
-            <span class="border border-rule px-2 py-0.75 text-[10px] text-muted-foreground">60–90 Min · Praxis/online</span>
+          <div class="mb-6 flex items-center justify-between gap-3">
+            <span class="eyebrow">A · Einzel</span>
+            <span class="border border-rule px-2 py-0.5 text-[11px] text-muted-foreground">60–90 Min · Praxis/online</span>
           </div>
-          <h3 class="mb-3.5 text-[22px]">Einzelsupervision</h3>
-          <ul class="m-0 mb-3.5 flex list-none flex-col gap-2 p-0 text-[13px] text-muted-foreground">
+          <h3 class="mb-4 text-2xl md:text-[26px]">Einzelsupervision</h3>
+          <ul class="m-0 mb-6 flex list-none flex-col gap-2 p-0 text-sm">
             <li>· Fallarbeit aus Pädagogik, Therapie, Pflege, Kultur</li>
             <li>· Rollen- und Leitungsfragen, Abgrenzung, Belastung</li>
             <li>· Berufsentscheidungen und Positionswechsel</li>
           </ul>
-          <div class="text-xs text-muted-foreground italic">Ideal als regelmäßiges Format alle 3–5 Wochen.</div>
+          <p class="caption">Ideal als regelmäßiges Format alle 3–5 Wochen.</p>
         </div>
-        <a class="btn-outline mt-4.5 text-center" href="#kontakt">Format anfragen</a>
+        <div class="mt-8 border-t pt-6"><a class="link-arrow" href="#kontakt"><span>Format anfragen</span><span class="arrow">→</span></a></div>
       </div>
-      <div class="flex min-w-0 flex-col justify-between border p-6.5 shadow-card transition-shadow duration-150 hover:shadow-card-hover">
+      <div class="card bg-muted-strong">
         <div>
-          <div class="mb-3.5 flex items-center justify-between">
-            <span class="text-xs text-muted-foreground">B · Kleingruppe</span>
-            <span class="border border-rule px-2 py-0.75 text-[10px] text-muted-foreground">120 Min · monatlich</span>
+          <div class="mb-6 flex items-center justify-between gap-3">
+            <span class="eyebrow">B · Kleingruppe</span>
+            <span class="border border-rule px-2 py-0.5 text-[11px] text-muted-foreground">120 Min · monatlich</span>
           </div>
-          <h3 class="mb-3.5 text-[22px]">Kleingruppe (3–6)</h3>
-          <ul class="m-0 mb-3.5 flex list-none flex-col gap-2 p-0 text-[13px] text-muted-foreground">
+          <h3 class="mb-4 text-2xl md:text-[26px]">Kleingruppe (3–6)</h3>
+          <ul class="m-0 mb-6 flex list-none flex-col gap-2 p-0 text-sm">
             <li>· Kollegiale Fallreflexion mit Methode statt Rat</li>
             <li>· Berufsgruppenübergreifend oder teamintern</li>
             <li>· Jede Sitzung: zwei Fälle, zwei Bilder, zwei Schritte</li>
           </ul>
-          <div class="text-xs text-muted-foreground italic">Feste Gruppe, klare Vertraulichkeit, rotierende Fälle.</div>
+          <p class="caption">Feste Gruppe, klare Vertraulichkeit, rotierende Fälle.</p>
         </div>
-        <a class="btn-outline mt-4.5 text-center" href="#kontakt">Format anfragen</a>
+        <div class="mt-8 border-t pt-6"><a class="link-arrow" href="#kontakt"><span>Format anfragen</span><span class="arrow">→</span></a></div>
       </div>
-      <div class="flex min-w-0 flex-col justify-between border p-6.5 shadow-card transition-shadow duration-150 hover:shadow-card-hover">
+      <div class="card bg-muted">
         <div>
-          <div class="mb-3.5 flex items-center justify-between">
-            <span class="text-xs text-muted-foreground">C · Team</span>
-            <span class="border border-rule px-2 py-0.75 text-[10px] text-muted-foreground">Halb-/Ganztag · vor Ort</span>
+          <div class="mb-6 flex items-center justify-between gap-3">
+            <span class="eyebrow">C · Team</span>
+            <span class="border border-rule px-2 py-0.5 text-[11px] text-muted-foreground">Halb-/Ganztag · vor Ort</span>
           </div>
-          <h3 class="mb-3.5 text-[22px]">Team &amp; Organisation</h3>
-          <ul class="m-0 mb-3.5 flex list-none flex-col gap-2 p-0 text-[13px] text-muted-foreground">
+          <h3 class="mb-4 text-2xl md:text-[26px]">Team &amp; Organisation</h3>
+          <ul class="m-0 mb-6 flex list-none flex-col gap-2 p-0 text-sm">
             <li>· Zusammenarbeit, Rollen, Schnittstellen klären</li>
             <li>· Konflikte sachlich und szenisch bearbeiten</li>
             <li>· Leitungssupervision und Konzepttage</li>
           </ul>
-          <div class="text-xs text-muted-foreground italic">Mit Vorgespräch, Zielvereinbarung und Auswertung.</div>
+          <p class="caption">Mit Vorgespräch, Zielvereinbarung und Auswertung.</p>
         </div>
-        <a class="btn-outline mt-4.5 text-center" href="#kontakt">Format anfragen</a>
+        <div class="mt-8 border-t pt-6"><a class="link-arrow" href="#kontakt"><span>Format anfragen</span><span class="arrow">→</span></a></div>
       </div>
     </div>
-    <div class="flex flex-wrap items-center justify-between gap-5 border px-7.5 py-6.5">
-      <q class="max-w-150 font-serif text-[17px] italic">Nicht sicher, welches Format passt? Schildern Sie kurz Ihr Anliegen — ich empfehle ehrlich, auch wenn das heißt: kein Auftrag.</q>
-      <a class="btn-outline whitespace-nowrap" href="#kontakt">Format klären</a>
+    <div class="mt-12 flex flex-col items-start justify-between gap-4 border bg-muted-strong p-6 md:flex-row md:items-center md:p-8">
+      <q class="max-w-2xl font-serif text-xl italic md:text-[22px]">Nicht sicher, welches Format passt? Schildern Sie kurz Ihr Anliegen — ich empfehle ehrlich, auch wenn das heißt: kein Auftrag.</q>
+      <a class="btn whitespace-nowrap" href="#kontakt">Format klären</a>
     </div>
   </div>
 </section>
 
 <!-- 04 HALTUNG -->
-<section class="bg-primary-deep py-16 text-background" id="haltung">
-  <div class="mx-auto flex max-w-[1180px] flex-col gap-7 px-6">
-    <div>
+<section class="section bg-primary-deep text-background" id="haltung">
+  <div class="page">
+    <div class="section-head">
       <div class="section-index text-primary-soft"><span>04</span><span class="rule bg-white/30"></span><span>Haltung</span></div>
-      <h2 class="mt-2.5 text-3xl">Klar im Rahmen, offen im Prozess.</h2>
+      <h2 class="heading">Klar im Rahmen, offen im Prozess.</h2>
     </div>
-    <div class="grid items-start gap-4 md:grid-cols-[0.8fr_1.6fr]">
-      <div class="bg-primary-darkest p-2.5">
+    <div class="grid items-start gap-8 lg:grid-cols-[0.8fr_1.6fr] lg:gap-12">
+      <figure class="m-0 bg-primary-darkest p-2.5">
         <img class="block aspect-3/4 w-full object-cover" src="images/haltung-sessel.png" alt="Ein Sessel im Studiolicht">
-      </div>
-      <div class="grid gap-4 md:grid-cols-2">
-        <div class="py-1.5"><h3 class="mb-2.5 text-[19px]">Expert:in bleiben Sie</h3><p class="m-0 text-[13px] text-primary-mist">Ich deute nicht, ich diagnostiziere nicht. Ich stelle Fragen, gebe Material und halte den Prozess, damit Sie zu Ihrer eigenen fundierten Einschätzung kommen.</p></div>
-        <div class="py-1.5"><h3 class="mb-2.5 text-[19px]">Erfahrung vor Erklärung</h3><p class="m-0 text-[13px] text-primary-mist">Erst handeln, dann ordnen. Der Körper und das Bild wissen oft früher als der Kopf, wo es klemmt — wir nutzen das systematisch.</p></div>
-        <div class="py-1.5"><h3 class="mb-2.5 text-[19px]">Lösungsorientiert, nicht beliebig</h3><p class="m-0 text-[13px] text-primary-mist">Jede Sitzung hat Ziel, Zeit und Ergebnis. Was nicht zum Auftrag gehört, benenne ich — und lasse es weg.</p></div>
-        <div class="py-1.5"><h3 class="mb-2.5 text-[19px]">Nüchtern statt esoterisch</h3><p class="m-0 text-[13px] text-primary-mist">Theatertherapeutische Methoden sind Handwerk: Aufstellung, Rolle, Szene, Reflexion. Kein Ritual, kein Jargon, keine Versprechen.</p></div>
+      </figure>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div><h3 class="mb-3 text-xl md:text-[22px]">Expert:in bleiben Sie</h3><p class="m-0 text-sm leading-relaxed text-primary-mist md:text-[15px]">Ich deute nicht, ich diagnostiziere nicht. Ich stelle Fragen, gebe Material und halte den Prozess, damit Sie zu Ihrer eigenen fundierten Einschätzung kommen.</p></div>
+        <div><h3 class="mb-3 text-xl md:text-[22px]">Erfahrung vor Erklärung</h3><p class="m-0 text-sm leading-relaxed text-primary-mist md:text-[15px]">Erst handeln, dann ordnen. Der Körper und das Bild wissen oft früher als der Kopf, wo es klemmt — wir nutzen das systematisch.</p></div>
+        <div><h3 class="mb-3 text-xl md:text-[22px]">Lösungsorientiert, nicht beliebig</h3><p class="m-0 text-sm leading-relaxed text-primary-mist md:text-[15px]">Jede Sitzung hat Ziel, Zeit und Ergebnis. Was nicht zum Auftrag gehört, benenne ich — und lasse es weg.</p></div>
+        <div><h3 class="mb-3 text-xl md:text-[22px]">Nüchtern statt esoterisch</h3><p class="m-0 text-sm leading-relaxed text-primary-mist md:text-[15px]">Theatertherapeutische Methoden sind Handwerk: Aufstellung, Rolle, Szene, Reflexion. Kein Ritual, kein Jargon, keine Versprechen.</p></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- 05 HINTERGRUND & ARBEITSWEISE -->
-<section class="py-16" id="ueber-mich">
-  <div class="mx-auto flex max-w-[1180px] flex-col gap-6 px-6">
-    <div>
+<section class="section" id="ueber-mich">
+  <div class="page">
+    <div class="section-head">
       <div class="section-index"><span>05</span><span class="rule"></span><span>Über mich</span></div>
-      <h2 class="mt-2.5 text-3xl">Hintergrund &amp; Arbeitsweise.</h2>
+      <h2 class="heading">Hintergrund &amp; Arbeitsweise.</h2>
     </div>
-    <div class="grid gap-6 md:grid-cols-[300px_1fr]">
-      <div class="flex flex-col">
-        <img class="block aspect-3/4 w-full object-cover" src="images/ueber-mich-portrait.png" alt="Porträt im Atelier">
-        <div class="pt-2 text-xs text-muted-foreground italic">[Ihr Name] im Atelier, Potsdam.</div>
-      </div>
-      <div class="flex flex-col justify-between gap-4.5 bg-muted p-7">
-        <div class="flex flex-col gap-3.5">
+    <div class="grid gap-8 lg:grid-cols-[5fr_7fr]">
+      <figure class="m-0 flex flex-col gap-2">
+        <img class="block aspect-3/4 w-full bg-muted-strong object-cover shadow-sm" src="images/ueber-mich-portrait.png" alt="Porträt im Atelier">
+        <figcaption class="caption">[Ihr Name] im Atelier, Potsdam.</figcaption>
+      </figure>
+      <div class="flex flex-col justify-between border border-border/60 bg-muted p-6 md:p-10">
+        <div class="flex flex-col gap-6">
           <div>
-            <div class="text-xs font-semibold tracking-[1.5px] text-primary uppercase">Profil &amp; Werdegang</div>
-            <h3 class="my-1 text-[22px]">[Ihr Name]</h3>
-            <p class="m-0 text-[13px] text-muted-foreground">Ausgebildeter Theatertherapeut (DGfT) · Supervisor in Ausbildung</p>
+            <div class="eyebrow">Profil &amp; Werdegang</div>
+            <h3 class="mt-1 text-[26px] md:text-[28px]">[Ihr Name]</h3>
+            <p class="m-0 card-text">Ausgebildeter Theatertherapeut (DGfT) · Supervisor in Ausbildung</p>
           </div>
-          <p class="m-0">Ich habe in Startups, in der digitalen Industrie und in selbstorganisierten Projekten gearbeitet, außerdem mit dem Theater der Unterdrückten — diskriminierungssensibel und mit Blick für Machtdynamiken in Teams.</p>
-          <p class="m-0">In meiner Arbeit schaffe ich Bedingungen, in denen Anliegen nicht weggeredet, sondern plastisch betrachtet werden dürfen. Sie sind die Expertin, der Experte Ihres Anliegens — ich biete Raum, Material und Methode.</p>
-          <div class="card justify-start gap-1.5">
-            <div class="text-[11px] font-semibold tracking-[0.5px] uppercase">Qualitätsstandards &amp; Mitgliedschaften</div>
-            <div class="text-xs">· Supervision, berufsbegleitend (Aufbaustudium, laufend)</div>
-            <div class="text-xs">· Theatertherapeut, Deutsche Gesellschaft für Theatertherapie (DGfT)</div>
-            <div class="text-xs">· Teilnahme Fachkongress [Name / Jahr — noch zu ergänzen]</div>
+          <div class="flex flex-col gap-4 text-sm leading-relaxed md:text-[15px]">
+            <p class="m-0">Ich habe in Startups, in der digitalen Industrie und in selbstorganisierten Projekten gearbeitet, außerdem mit dem Theater der Unterdrückten — diskriminierungssensibel und mit Blick für Machtdynamiken in Teams.</p>
+            <p class="m-0">In meiner Arbeit schaffe ich Bedingungen, in denen Anliegen nicht weggeredet, sondern plastisch betrachtet werden dürfen. Sie sind die Expertin, der Experte Ihres Anliegens — ich biete Raum, Material und Methode.</p>
+          </div>
+          <div class="flex flex-col gap-2 border bg-muted-strong p-5">
+            <div class="text-[11px] font-semibold tracking-wider uppercase">Qualitätsstandards &amp; Mitgliedschaften</div>
+            <ul class="m-0 flex list-none flex-col gap-1.5 p-0 text-[13px] text-muted-foreground">
+              <li class="flex items-center gap-2"><span class="size-1.5 flex-none rounded-full bg-primary-deep"></span>Supervision, berufsbegleitend (Aufbaustudium, laufend)</li>
+              <li class="flex items-center gap-2"><span class="size-1.5 flex-none rounded-full bg-primary-deep"></span>Theatertherapeut, Deutsche Gesellschaft für Theatertherapie (DGfT)</li>
+              <li class="flex items-center gap-2"><span class="size-1.5 flex-none rounded-full bg-primary-deep"></span>Teilnahme Fachkongress [Name / Jahr — noch zu ergänzen]</li>
+            </ul>
           </div>
         </div>
-        <div class="flex items-center justify-between border-t pt-3.5">
+        <div class="mt-8 flex flex-col justify-between gap-4 border-t pt-8 sm:flex-row sm:items-center">
           <span class="text-xs text-muted-foreground">Sprachen: Deutsch / Englisch</span>
-          <a href="#kontakt" class="group inline-flex items-center gap-1.5 text-sm font-semibold text-primary no-underline transition-colors hover:text-foreground"><span>Kontakt aufnehmen</span><span class="inline-block transition-transform group-hover:translate-x-0.75">→</span></a>
+          <a href="#kontakt" class="link-arrow font-semibold"><span>Kontakt aufnehmen</span><span class="arrow">→</span></a>
         </div>
       </div>
     </div>
@@ -208,31 +222,31 @@
 </section>
 
 <!-- 06 PREISE -->
-<section class="bg-muted py-16" id="preise">
-  <div class="mx-auto flex max-w-[1180px] flex-col gap-6 px-6">
-    <div>
+<section class="section bg-muted" id="preise">
+  <div class="page">
+    <div class="section-head">
       <div class="section-index"><span>06</span><span class="rule"></span><span>Preise</span></div>
-      <h2 class="mt-2.5 mb-2 text-3xl">Transparente Preise, klare Vereinbarung.</h2>
-      <p class="m-0 max-w-140 text-muted-foreground">Alle Preise zzgl. MwSt., inkl. Vor- und Nachbereitung sowie Kurzprotokoll. Soziale Einrichtungen und Selbstzahler:innen auf Anfrage mit Ermäßigung.</p>
+      <h2 class="heading">Transparente Preise, klare Vereinbarung.</h2>
+      <p class="lead">Alle Preise zzgl. MwSt., inkl. Vor- und Nachbereitung sowie Kurzprotokoll. Soziale Einrichtungen und Selbstzahler:innen auf Anfrage mit Ermäßigung.</p>
     </div>
-    <div class="grid gap-6 md:grid-cols-[1fr_260px]">
-      <div class="divide-y">
-        <div class="flex justify-between gap-4 py-4"><div><div class="text-[15px]">Erstgespräch (20 Min, telefonisch)</div><div class="text-xs text-muted-foreground">Kennenlernen, Auftragsklärung, Formatempfehlung</div></div><div class="font-serif text-xl whitespace-nowrap">kostenfrei</div></div>
-        <div class="flex justify-between gap-4 py-4"><div><div class="text-[15px]">Einzelsupervision (60 Min)</div><div class="text-xs text-muted-foreground">Praxis oder online · alle 3–5 Wochen empfohlen</div></div><div class="font-serif text-xl whitespace-nowrap">120 €</div></div>
-        <div class="flex justify-between gap-4 py-4"><div><div class="text-[15px]">Einzelsupervision (90 Min)</div><div class="text-xs text-muted-foreground">Für komplexe Fälle mit szenischer Arbeit</div></div><div class="font-serif text-xl whitespace-nowrap">170 €</div></div>
-        <div class="flex justify-between gap-4 py-4"><div><div class="text-[15px]">Kleingruppe (120 Min, 3–6 Pers.)</div><div class="text-xs text-muted-foreground">Gesamtpauschale pro Sitzung, monatlich</div></div><div class="font-serif text-xl whitespace-nowrap">320 €</div></div>
-        <div class="flex justify-between gap-4 py-4"><div><div class="text-[15px]">Teamtag (halbtags / ganztags)</div><div class="text-xs text-muted-foreground">Inkl. Vorgespräch und Auswertung · Angebot nach Aufwand</div></div><div class="font-serif text-xl whitespace-nowrap">650 / 1.100 €</div></div>
+    <div class="grid gap-8 lg:grid-cols-[1fr_320px]">
+      <div class="divide-y self-start border-y bg-card px-6 md:px-8">
+        <div class="flex justify-between gap-4 py-5"><div><div class="text-base">Erstgespräch (20 Min, telefonisch)</div><div class="text-[13px] text-muted-foreground">Kennenlernen, Auftragsklärung, Formatempfehlung</div></div><div class="font-serif text-2xl whitespace-nowrap text-primary-deep">kostenfrei</div></div>
+        <div class="flex justify-between gap-4 py-5"><div><div class="text-base">Einzelsupervision (60 Min)</div><div class="text-[13px] text-muted-foreground">Praxis oder online · alle 3–5 Wochen empfohlen</div></div><div class="font-serif text-2xl whitespace-nowrap text-primary-deep">120 €</div></div>
+        <div class="flex justify-between gap-4 py-5"><div><div class="text-base">Einzelsupervision (90 Min)</div><div class="text-[13px] text-muted-foreground">Für komplexe Fälle mit szenischer Arbeit</div></div><div class="font-serif text-2xl whitespace-nowrap text-primary-deep">170 €</div></div>
+        <div class="flex justify-between gap-4 py-5"><div><div class="text-base">Kleingruppe (120 Min, 3–6 Pers.)</div><div class="text-[13px] text-muted-foreground">Gesamtpauschale pro Sitzung, monatlich</div></div><div class="font-serif text-2xl whitespace-nowrap text-primary-deep">320 €</div></div>
+        <div class="flex justify-between gap-4 py-5"><div><div class="text-base">Teamtag (halbtags / ganztags)</div><div class="text-[13px] text-muted-foreground">Inkl. Vorgespräch und Auswertung · Angebot nach Aufwand</div></div><div class="font-serif text-2xl whitespace-nowrap text-primary-deep">650 / 1.100 €</div></div>
       </div>
-      <div class="flex flex-col gap-4">
-        <div class="bg-primary-deep p-5.5 text-background">
-          <h3 class="mb-2.5 text-lg">Kontingent für Einrichtungen</h3>
-          <p class="m-0 mb-3.5 text-xs text-primary-mist">10er-Kontingent Einzel + 2 Teamtage pro Jahr. Fester Rahmen, planbare Kosten, ein Ansprechpartner.</p>
-          <div class="mb-3 font-serif text-[22px]">ab 1.450 €</div>
-          <a href="#kontakt" class="block border border-background p-2.25 text-center text-xs text-background no-underline transition-colors hover:bg-background hover:text-primary-deep">Kontingent anfragen</a>
+      <div class="flex flex-col gap-6">
+        <div class="bg-primary-deep p-6 text-background shadow-sm md:p-8">
+          <h3 class="mb-3 text-[22px] leading-snug">Kontingent für Einrichtungen</h3>
+          <p class="m-0 mb-4 text-[13px] text-primary-mist">10er-Kontingent Einzel + 2 Teamtage pro Jahr. Fester Rahmen, planbare Kosten, ein Ansprechpartner.</p>
+          <div class="mb-5 font-serif text-[32px]">ab 1.450 €</div>
+          <a href="#kontakt" class="block border border-background px-4 py-3 text-center text-sm font-medium text-background no-underline transition-colors hover:bg-background hover:text-primary-deep">Kontingent anfragen</a>
         </div>
-        <div class="bg-card p-4.5">
-          <div class="mb-2 text-xs font-semibold">Gut zu wissen</div>
-          <p class="m-0 text-xs">Absage bis 48 h kostenfrei · Rechnung monatlich · Online ohne Aufpreis · Fahrtkosten ab 30 km nach Absprache.</p>
+        <div class="border border-border/60 bg-card p-6">
+          <div class="eyebrow mb-2">Gut zu wissen</div>
+          <p class="m-0 text-[13px] text-muted-foreground">Absage bis 48 h kostenfrei · Rechnung monatlich · Online ohne Aufpreis · Fahrtkosten ab 30 km nach Absprache.</p>
         </div>
       </div>
     </div>
@@ -240,21 +254,21 @@
 </section>
 
 <!-- 07 KONTAKT -->
-<section class="py-16" id="kontakt">
-  <div class="mx-auto flex max-w-[1180px] flex-col gap-6 px-6">
-    <div>
+<section class="section" id="kontakt">
+  <div class="page">
+    <div class="section-head">
       <div class="section-index"><span>07</span><span class="rule"></span><span>Kontakt</span></div>
-      <h2 class="mt-2.5 mb-2 text-3xl">Ein unverbindliches Gespräch beginnen.</h2>
-      <p class="m-0 max-w-140 text-muted-foreground">Beschreiben Sie kurz Ihr Anliegen oder hinterlassen Sie eine Telefonnummer für einen direkten Rückruf.</p>
+      <h2 class="heading">Ein unverbindliches Gespräch beginnen.</h2>
+      <p class="lead">Beschreiben Sie kurz Ihr Anliegen oder hinterlassen Sie eine Telefonnummer für einen direkten Rückruf.</p>
     </div>
-    <div class="grid gap-5 md:grid-cols-[1.4fr_1fr]">
-      <form class="flex flex-col gap-3.5 bg-muted p-7" onsubmit="event.preventDefault();document.getElementById('sent').hidden=false;this.reset();">
-        <div class="grid gap-3.5 md:grid-cols-2">
+    <div class="grid gap-8 lg:grid-cols-[7fr_5fr]">
+      <form class="flex flex-col gap-5 border border-border/60 bg-muted p-6 shadow-sm md:p-10" onsubmit="event.preventDefault();document.getElementById('sent').hidden=false;this.reset();">
+        <div class="grid gap-5 sm:grid-cols-2">
           <div class="flex flex-col gap-1"><label class="field-label" for="m-name">Ihr Name *</label><input class="field-input" id="m-name" required placeholder="Vor- und Nachname"></div>
           <div class="flex flex-col gap-1"><label class="field-label" for="m-mail">E-Mail-Adresse *</label><input class="field-input" id="m-mail" type="email" required placeholder="ihre.adresse@domain.de"></div>
         </div>
-        <div class="grid gap-3.5 md:grid-cols-2">
-          <div class="flex flex-col gap-1"><label class="field-label" for="m-phone">Telefon (optional)</label><input class="field-input" id="m-phone" placeholder="+49 …"></div>
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div class="flex flex-col gap-1"><label class="field-label" for="m-phone">Telefon (optional)</label><input class="field-input" id="m-phone" type="tel" placeholder="+49 …"></div>
           <div class="flex flex-col gap-1"><label class="field-label" for="m-format">Gewünschtes Format</label>
             <select class="field-input" id="m-format">
               <option>Einzelsupervision</option>
@@ -264,22 +278,27 @@
             </select>
           </div>
         </div>
-        <div class="flex flex-col gap-1"><label class="field-label" for="m-msg">Kurze Skizze Ihres Anliegens</label><textarea class="field-input" id="m-msg" rows="4" placeholder="Welches Thema, welche Dynamik oder welcher Praxisfall beschäftigt Sie aktuell?"></textarea></div>
-        <button class="btn w-fit border-0 leading-[normal]" type="submit">Anfrage absenden</button>
-        <div id="sent" hidden class="bg-primary px-3.5 py-3 text-[13px] text-primary-foreground">Vielen Dank für Ihre Anfrage. Ich melde mich verlässlich innerhalb von zwei Werktagen bei Ihnen.</div>
-      </form>
-      <div class="card gap-4 border p-7">
-        <div class="flex flex-col gap-3.5">
-          <div>
-            <div class="text-xs font-semibold tracking-[1.5px] text-primary uppercase">Atelier &amp; Anschrift</div>
-            <h3 class="mt-1 text-[19px]">Modulo</h3>
-            <p class="m-0 mt-0.5 text-[13px] text-muted-foreground">Raum für erfahrungsbasierte Prozessbegleitung</p>
-          </div>
-          <div class="text-[13px]">[Straße, Hausnummer]<br><span class="text-muted-foreground">[PLZ] Potsdam</span></div>
-          <div class="text-[13px] text-primary">kontakt@modulo-supervision.de</div>
-          <div class="text-xs text-muted-foreground">Barrierefreier Zugang — Details auf Anfrage.</div>
+        <div class="flex flex-col gap-1"><label class="field-label" for="m-msg">Kurze Skizze Ihres Anliegens</label><textarea class="field-input resize-y" id="m-msg" rows="4" placeholder="Welches Thema, welche Dynamik oder welcher Praxisfall beschäftigt Sie aktuell?"></textarea></div>
+        <div class="flex items-center justify-between gap-4 pt-2">
+          <button class="btn" type="submit">Anfrage absenden</button>
+          <span class="text-xs text-muted-foreground">* Pflichtfelder</span>
         </div>
-        <div class="text-[11px] text-muted-foreground">Vertraulichkeit und Datenschutz nach DSGVO garantiert. Keine Weitergabe Ihrer Daten.</div>
+        <div id="sent" hidden class="bg-primary-deep p-4 text-sm text-primary-foreground">Vielen Dank für Ihre Anfrage. Ich melde mich verlässlich innerhalb von zwei Werktagen bei Ihnen.</div>
+      </form>
+      <div class="flex flex-col justify-between gap-6 border bg-muted-strong p-6 shadow-sm md:p-10">
+        <div class="flex flex-col gap-6">
+          <div>
+            <div class="eyebrow">Atelier &amp; Anschrift</div>
+            <h3 class="mt-1 text-[22px] md:text-2xl">Modulo</h3>
+            <p class="m-0 mt-1 text-sm text-muted-foreground">Raum für erfahrungsbasierte Prozessbegleitung</p>
+          </div>
+          <div class="flex flex-col gap-4 text-sm">
+            <div><div class="font-medium">[Straße, Hausnummer]</div><div class="text-muted-foreground">[PLZ] Potsdam</div></div>
+            <div class="text-primary-deep">kontakt@modulo-supervision.de</div>
+            <div class="text-[13px] text-muted-foreground">Barrierefreier Zugang — Details auf Anfrage.</div>
+          </div>
+        </div>
+        <div class="border-t pt-6 text-xs text-muted-foreground">Vertraulichkeit und Datenschutz nach DSGVO garantiert. Keine Weitergabe Ihrer Daten.</div>
       </div>
     </div>
   </div>
@@ -287,11 +306,13 @@
 
 </main>
 
-<footer class="border-t py-8">
-  <div class="mx-auto flex max-w-[1180px] flex-wrap items-center justify-between gap-3.5 px-6">
-    <div class="font-serif text-[17px]">MODULO</div>
-    <div class="flex gap-5.5 text-xs text-muted-foreground"><span>Impressum</span><span>Datenschutz</span><span>Ethik &amp; Verschwiegenheit</span></div>
-    <div class="text-xs text-muted-foreground">© 2026 · Potsdam</div>
+<footer class="border-t py-12 md:py-16">
+  <div class="page flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+    <div class="flex flex-col gap-1">
+      <div class="font-serif text-[20px] tracking-tight md:text-[22px]">MODULO</div>
+      <div class="text-[13px] text-muted-foreground">Atelier für erfahrungsbasierte Supervision · © 2026 · Potsdam</div>
+    </div>
+    <div class="flex flex-wrap gap-6 text-xs text-muted-foreground md:gap-8 md:text-[13px]"><span>Impressum</span><span>Datenschutz</span><span>Ethik &amp; Verschwiegenheit</span></div>
   </div>
 </footer>
 
