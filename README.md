@@ -18,6 +18,24 @@ Offene Punkte, bevor das live gehen kann:
 - Preise prüfen (aktuell aus dem Banani-Entwurf übernommen, nicht final)
 - Kontaktformular an ein echtes Backend/E-Mail-Ziel anbinden
 
+## Technik
+
+Gestaltet mit [Tailwind CSS](https://tailwindcss.com) v4, nach denselben
+Konventionen wie der Übungskatalog: Farben als semantische Tokens
+(`primary`, `muted`, `border` …) in `src/styles.css`, Layout direkt als
+Utility-Klassen in `index.html`. Wiederkehrende Bausteine (`.btn`,
+`.btn-outline`, `.card`, Formularfelder) stehen dort als Komponenten-Klassen.
+
+Die gebaute Datei `assets/styles.css` ist eingecheckt, damit die Seite ohne
+Build-Schritt läuft (z. B. auf GitHub Pages). Nach Änderungen an Klassen oder
+Tokens neu bauen:
+
+```bash
+npm install
+npm run build   # einmalig
+npm run dev     # baut bei jeder Änderung neu
+```
+
 ## Gestaltungsprinzip
 
 Petrol (`#2B4A45`) ist die einzige gestaltete Akzentfarbe — sie steht für

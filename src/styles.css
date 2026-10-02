@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* Quelle für assets/styles.css. Nach Änderungen hier oder an Klassen in
+   index.html neu bauen: `npm run build`. */
+
+@source "../index.html";
+
+/* Farben wie im Übungskatalog als semantische Tokens: Petrol (primary) ist die
+   einzige gestaltete Akzentfarbe, alles andere bleibt Papier und Tinte. */
+:root {
+  --background: #fcf9f5;
+  --foreground: #1c1c1a;
+  --card: #ffffff;
+  --muted: #f6f3ef;
+  --muted-foreground: #5f5f59;
+  --border: #e5e2de;
+  --rule: #c1c8c5;
+  --primary: #2b4a45;
+  --primary-deep: #13332f;
+  --primary-darkest: #0d201d;
+  --primary-soft: #97b9b2;
+  --primary-mist: #d6e2df;
+  --primary-foreground: #fcf9f5;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-rule: var(--rule);
+  --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-darkest: var(--primary-darkest);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-mist: var(--primary-mist);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --font-sans: "Work Sans", Arial, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+
+  /* Fließtext läuft durchgehend mit 1.55 Zeilenhöhe. */
+  --text-xs--line-height: 1.55;
+  --text-sm--line-height: 1.55;
+  --text-base--line-height: 1.55;
+  --text-lg--line-height: 1.55;
+  --text-xl--line-height: 1.55;
+  --text-3xl--line-height: 1.55;
+
+  --shadow-card: 0 1px 2px rgb(28 28 26 / 0.04);
+  --shadow-card-hover: 0 4px 14px rgb(28 28 26 / 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans text-[15px] leading-[1.55];
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-serif font-medium;
+  }
+}
+
+/* Wiederkehrende Bausteine, entsprechen den Button-Varianten im Katalog. */
+@layer components {
+  .btn {
+    @apply inline-block cursor-pointer border border-primary bg-primary px-6.5 py-3.25 text-sm font-semibold text-primary-foreground no-underline transition-colors duration-150 hover:border-primary-deep hover:bg-primary-deep;
+  }
+  .btn-outline {
+    @apply inline-block border border-foreground bg-transparent px-6.5 py-3 text-sm font-semibold text-foreground no-underline transition-colors duration-150 hover:border-primary hover:bg-muted hover:text-primary;
+  }
+  .card {
+    @apply flex min-w-0 flex-col justify-between bg-card p-5 shadow-card transition-shadow duration-150 hover:shadow-card-hover;
+  }
+  .section-index {
+    @apply flex items-center gap-2.5 text-xs font-semibold tracking-[1.5px] text-primary uppercase;
+  }
+  .section-index .rule {
+    @apply h-px w-8.5 flex-none bg-rule;
+  }
+  .field-label {
+    @apply text-[11px] tracking-[0.5px] text-muted-foreground uppercase;
+  }
+  .field-input {
+    @apply border border-border bg-card px-3 py-2.75 leading-[normal] font-sans text-[13px] text-foreground transition-colors duration-150 focus:border-primary focus:outline-none;
+  }
+}
